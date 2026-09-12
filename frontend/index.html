@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A fast and reliable serverless URL shortener."
+    >
+
+    <title>LinkCraft — URL Shortener</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="hero">
+
+            <div class="brand">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">LINKCRAFT</span>
+            </div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    SIMPLE • FAST • SECURE
+                </p>
+
+                <h1>
+                    Short links,<br>
+                    <span>beautifully made.</span>
+                </h1>
+
+                <p class="description">
+                    Transform long URLs into clean, memorable
+                    links that are easy to share.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="shortener-card">
+
+            <div class="card-header">
+
+                <h2>Create a short link</h2>
+
+                <p>
+                    Paste your destination URL below.
+                </p>
+
+            </div>
+
+
+            <form id="shortenForm">
+
+                <label for="urlInput">
+                    Destination URL
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="url"
+                        id="urlInput"
+                        name="url"
+                        placeholder="https://example.com/your-long-url"
+                        autocomplete="url"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="shortenButton"
+                    >
+                        Shorten
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div
+                id="loading"
+                class="status hidden"
+            >
+                Creating your short link...
+            </div>
+
+
+            <div
+                id="result"
+                class="result hidden"
+            >
+
+                <div class="result-header">
+                    <span>YOUR SHORT LINK</span>
+                </div>
+
+                <div class="result-box">
+
+                    <a
+                        id="shortUrl"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ></a>
+
+                    <button
+                        type="button"
+                        id="copyButton"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
+                <p id="copyMessage" class="copy-message"></p>
+
+            </div>
+
+
+            <div
+                id="errorMessage"
+                class="error hidden"
+            ></div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Built with AWS Lambda • API Gateway • DynamoDB
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
