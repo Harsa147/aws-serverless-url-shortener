@@ -26,8 +26,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Package Lambda
+        working-directory: .
         run: |
-          cd ../lambda
+          cd lambda
           zip -r lambda.zip .
 
       - name: Configure AWS credentials
