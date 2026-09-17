@@ -50,3 +50,8 @@ jobs:
       - name: Terraform Plan
         working-directory: terraform
         run: terraform plan
+
+      - name: Terraform Apply
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        working-directory: terraform
+        run: terraform apply -auto-approve
