@@ -55,3 +55,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         working-directory: terraform
         run: terraform apply -auto-approve
+
+      - name: Deploy Lambda Code
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: aws lambda update-function-code --function-name url-shortener --zip-file fileb://lambda/lambda.zip
