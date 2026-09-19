@@ -59,3 +59,7 @@ jobs:
       - name: Deploy Lambda Code
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: aws lambda update-function-code --function-name url-shortener --zip-file fileb://lambda/lambda.zip
+
+      - name: Run API Tests
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: python tests/test_api.py
