@@ -63,3 +63,13 @@ jobs:
       - name: Run API Tests
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: python tests/test_api.py
+
+      - name: Deploy Frontend
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        working-directory: terraform
+        run: aws s3 sync ../frontend "s3://$(terraform output -raw frontend_bucket_name)"
+
+      - name: Invalidate CloudFront Cache
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        working-directory: terraform
+        run: aws cloudfront create-invalidation --distribution-id "$(terraform output -raw cloudfront_distribution_id)" --paths "/*"
