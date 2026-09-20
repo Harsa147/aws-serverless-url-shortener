@@ -47,6 +47,14 @@ jobs:
         working-directory: terraform
         run: terraform validate
 
+      - name: Debug Terraform State
+        working-directory: terraform
+        run: |
+          echo "=== TERRAFORM STATE ==="
+          terraform state list
+          echo "=== TERRAFORM OUTPUT ==="
+          terraform output
+
       - name: Terraform Plan
         working-directory: terraform
         run: terraform plan
