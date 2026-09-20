@@ -1,5 +1,9 @@
 resource "aws_s3_bucket" "frontend" {
-  bucket_prefix = "url-shortener-frontend-"
+  bucket = "url-shortener-frontend-732d1c6fc7769ba220e6ff99be"
+
+  lifecycle {
+    prevent_destroy = true
+  }
 
   tags = {
     Name        = "url-shortener-frontend"
