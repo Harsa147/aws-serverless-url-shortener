@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950">
+<rect width="1600" height="950" fill="#ffffff"/>
+<style>
+.title{font:700 34px Arial;fill:#172033}.sub{font:400 18px Arial;fill:#526070}.head{font:700 22px Arial;fill:#173b72}.label{font:700 18px Arial;fill:#172033}.small{font:400 15px Arial;fill:#526070}.box{stroke-width:2;rx:16}.arrow{stroke:#526070;stroke-width:3;fill:none;marker-end:url(#a)}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#526070"/></marker></defs>
+<text x="55" y="55" class="title">LinkCraft – URL Shortener</text>
+<text x="55" y="86" class="sub">Serverless AWS architecture • Terraform • GitHub Actions CI/CD • Monitoring &amp; alerting</text>
+<rect x="40" y="120" width="330" height="300" fill="#f7f9fc" stroke="#9aa7b8" class="box"/>
+<text x="65" y="155" class="head">Users</text>
+<rect x="75" y="190" width="260" height="80" fill="#fff" stroke="#cbd3df" class="box"/>
+<text x="205" y="225" text-anchor="middle" class="label">Web Browser</text><text x="205" y="250" text-anchor="middle" class="small">Desktop / Mobile</text>
+<rect x="75" y="295" width="260" height="80" fill="#fff" stroke="#cbd3df" class="box"/>
+<text x="205" y="330" text-anchor="middle" class="label">Create / Redirect</text><text x="205" y="355" text-anchor="middle" class="small">Short URLs</text>
+<rect x="410" y="120" width="730" height="250" fill="#f4f9ff" stroke="#5b9cff" class="box"/>
+<text x="440" y="155" class="head">Frontend — AWS</text>
+<rect x="455" y="190" width="285" height="120" fill="#fff" stroke="#b8c8df" class="box"/>
+<text x="597" y="230" text-anchor="middle" class="label">Amazon CloudFront</text><text x="597" y="257" text-anchor="middle" class="small">CDN • HTTPS</text><text x="597" y="282" text-anchor="middle" class="small">Origin Access Control</text>
+<rect x="810" y="190" width="285" height="120" fill="#fff" stroke="#b8c8df" class="box"/>
+<text x="952" y="230" text-anchor="middle" class="label">Amazon S3</text><text x="952" y="257" text-anchor="middle" class="small">Private frontend bucket</text><text x="952" y="282" text-anchor="middle" class="small">HTML • CSS • JavaScript</text>
+<rect x="410" y="405" width="730" height="245" fill="#f5fbf7" stroke="#64b983" class="box"/>
+<text x="440" y="440" class="head">Backend — Serverless AWS</text>
+<rect x="445" y="475" width="200" height="125" fill="#fff" stroke="#b9d9c4" class="box"/>
+<text x="545" y="515" text-anchor="middle" class="label">API Gateway</text><text x="545" y="542" text-anchor="middle" class="small">HTTP API</text><text x="545" y="568" text-anchor="middle" class="small">CORS • Throttling</text>
+<rect x="675" y="475" width="200" height="125" fill="#fff" stroke="#b9d9c4" class="box"/>
+<text x="775" y="515" text-anchor="middle" class="label">AWS Lambda</text><text x="775" y="542" text-anchor="middle" class="small">Python 3.14</text><text x="775" y="568" text-anchor="middle" class="small">Validate • Generate • Redirect</text>
+<rect x="905" y="475" width="200" height="125" fill="#fff" stroke="#b9d9c4" class="box"/>
+<text x="1005" y="515" text-anchor="middle" class="label">DynamoDB</text><text x="1005" y="542" text-anchor="middle" class="small">url-mappings</text><text x="1005" y="568" text-anchor="middle" class="small">On-demand</text>
+<rect x="1170" y="120" width="390" height="300" fill="#fff6f8" stroke="#e67c93" class="box"/>
+<text x="1200" y="155" class="head">Monitoring &amp; Alerting</text>
+<rect x="1210" y="190" width="310" height="85" fill="#fff" stroke="#e3bcc5" class="box"/>
+<text x="1365" y="225" text-anchor="middle" class="label">Amazon CloudWatch</text><text x="1365" y="251" text-anchor="middle" class="small">Logs • Metrics • Dashboard • Alarm</text>
+<rect x="1210" y="300" width="310" height="85" fill="#fff" stroke="#e3bcc5" class="box"/>
+<text x="1365" y="335" text-anchor="middle" class="label">Amazon SNS</text><text x="1365" y="361" text-anchor="middle" class="small">url-shortener-alerts</text>
+<rect x="40" y="705" width="930" height="195" fill="#f8f5ff" stroke="#9b7be8" class="box"/>
+<text x="70" y="740" class="head">CI/CD — GitHub Actions</text>
+<rect x="75" y="775" width="190" height="75" fill="#fff" stroke="#d0c4ef" class="box"/><text x="170" y="808" text-anchor="middle" class="label">GitHub</text><text x="170" y="832" text-anchor="middle" class="small">Push to main</text>
+<rect x="305" y="775" width="240" height="75" fill="#fff" stroke="#d0c4ef" class="box"/><text x="425" y="808" text-anchor="middle" class="label">GitHub Actions</text><text x="425" y="832" text-anchor="middle" class="small">OIDC authentication</text>
+<rect x="585" y="775" width="165" height="75" fill="#fff" stroke="#d0c4ef" class="box"/><text x="667" y="808" text-anchor="middle" class="label">Terraform</text><text x="667" y="832" text-anchor="middle" class="small">Plan / Apply</text>
+<rect x="790" y="775" width="145" height="75" fill="#fff" stroke="#d0c4ef" class="box"/><text x="862" y="808" text-anchor="middle" class="label">Deploy</text><text x="862" y="832" text-anchor="middle" class="small">AWS resources</text>
+<rect x="1000" y="705" width="560" height="195" fill="#fffaf0" stroke="#d8aa55" class="box"/>
+<text x="1030" y="740" class="head">Infrastructure as Code</text>
+<text x="1030" y="780" class="label">Terraform manages:</text>
+<text x="1030" y="808" class="small">S3 • CloudFront • API Gateway • Lambda • DynamoDB</text>
+<text x="1030" y="835" class="small">IAM • CloudWatch • SNS • Remote state</text>
+<text x="1030" y="865" class="small">Remote state: encrypted + versioned S3 + lockfile</text>
+<path d="M370 230 H455" class="arrow"/><path d="M740 250 H810" class="arrow"/>
+<path d="M597 310 V475" class="arrow"/><path d="M645 537 H675" class="arrow"/><path d="M875 537 H905" class="arrow"/>
+<path d="M1140 250 H1210" class="arrow"/>
+<path d="M1365 275 V300" class="arrow"/>
+<path d="M265 812 H305" class="arrow"/><path d="M545 812 H585" class="arrow"/><path d="M750 812 H790" class="arrow"/>
+</svg>
